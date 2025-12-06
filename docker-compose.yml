@@ -94,6 +94,7 @@ services:
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.security.transport.ssl.client_authentication=optional
       - xpack.license.self_generated.type=${LICENSE}
+      - xpack.monitoring.collection.enabled=true
     mem_limit: ${MEM_LIMIT}
     ulimits:
       memlock:
@@ -132,7 +133,7 @@ services:
       - SERVER_SSL_CERTIFICATE=config/certs/kibana/kibana.crt
       - SERVER_SSL_KEY=config/certs/kibana/kibana.key
       - SERVER_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
-    mem_limit: ${MEM_LIMIT}
+    mem_limit: 2147483648
     healthcheck:
       test:
         [

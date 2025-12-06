@@ -1,10 +1,16 @@
-xpack.encryptedSavedObjects.encryptionKey: "thirty-two-or-more-random-characters"
 server.host: "0.0.0.0"
 telemetry.enabled: "true"
+
+xpack.security.encryptionKey: C1tHnfrlfxSPxPlQ8BlgPB5qMNRtg5V5
+xpack.encryptedSavedObjects.encryptionKey: D12GTfrlfxSPxPlGRBlgPB5qM5GOPDV5
+xpack.reporting.encryptionKey: RSCueeHKzrqzOVTJhkjt17EMnzM96LlN
+
 xpack.fleet.packages:
   - name: fleet_server
     version: latest
   - name: system
+    version: latest
+  - name: windows
     version: latest
 xpack.fleet.agentPolicies:
   - name: Fleet-Server-Policy
@@ -14,5 +20,3 @@ xpack.fleet.agentPolicies:
       - name: fleet_server-1
         package:
           name: fleet_server
-
-
